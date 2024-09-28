@@ -1,0 +1,311 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://gift_screen.gd" type="Script" id=1]
+[ext_resource path="res://images/wb.background.png" type="Texture" id=2]
+[ext_resource path="res://objects/background/stars.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/light.png" type="Texture" id=4]
+[ext_resource path="res://images/coins.png" type="Texture" id=5]
+[ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://images/blue_btnishe.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "rot"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 100
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "show"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("count:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, 693 ), Vector2( -1, 643 ), Vector2( -1, 653 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("coins/coins2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -11.1564, -9.58584 ), Vector2( -30.5172, -28.9467 ), Vector2( -32.6684, -31.0979 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("coins/coins5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.6262, -17.208 ), Vector2( 3.7774, -40.8713 ), Vector2( 5.92861, -47.3249 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("coins/coins3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -13.9932, -2.66618 ), Vector2( -37.6565, -2.66618 ), Vector2( -44.1101, -2.66618 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("coins/coins4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9.77872, -14.3403 ), Vector2( 22.6859, -27.2475 ), Vector2( 26.9884, -31.5499 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("coins/coins6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.3458, -5.91799 ), Vector2( 37.8578, -8.06919 ), Vector2( 42.1602, -10.2204 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ColorRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="gift_screen" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="wb.background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 340.633, 676.516 )
+scale = Vector2( 1.17334, 1.21389 )
+texture = ExtResource( 2 )
+
+[node name="stars" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -36.2725, -15.3641 )
+
+[node name="light" type="Sprite" parent="." index="2"]
+
+position = Vector2( 326.598, 561.211 )
+rotation = 1.71627
+scale = Vector2( 1.39485, 1.39485 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="rotating" type="AnimationPlayer" parent="light" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/rot = SubResource( 1 )
+blend_times = [  ]
+
+[node name="coins" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 326.896, 565.064 )
+scale = Vector2( 2.32428, 2.32428 )
+texture = ExtResource( 5 )
+
+[node name="coins2" type="Sprite" parent="coins" index="0"]
+
+position = Vector2( -11.1564, -9.58584 )
+scale = Vector2( 0.458236, 0.458236 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coins3" type="Sprite" parent="coins" index="1"]
+
+position = Vector2( -13.9932, -2.66618 )
+scale = Vector2( 0.347145, 0.347145 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coins4" type="Sprite" parent="coins" index="2"]
+
+position = Vector2( 9.77872, -14.3403 )
+scale = Vector2( 0.347145, 0.347145 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coins5" type="Sprite" parent="coins" index="3"]
+
+position = Vector2( 1.6262, -17.208 )
+scale = Vector2( 0.251925, 0.251925 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="coins6" type="Sprite" parent="coins" index="4"]
+
+position = Vector2( 16.3458, -5.91799 )
+scale = Vector2( 0.220184, 0.220184 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="count" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_top = 693.0
+margin_right = 626.0
+margin_bottom = 806.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "+1000"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/show = SubResource( 3 )
+blend_times = [  ]
+
+[node name="ColorRect" type="ColorRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -17.0
+margin_top = -17.0
+margin_right = 742.0
+margin_bottom = 1217.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Node2D" type="Node2D" parent="." index="7"]
+
+[node name="Label" type="Label" parent="Node2D" index="0"]
+
+modulate = Color( 1, 1, 1, 0.639647 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 921.0
+margin_right = 641.0
+margin_bottom = 978.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "Tap to continue"
+align = 1
+autowrap = true
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." index="8"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -37.2087, -20.0355 )
+scale = Vector2( 5.203, 9.72571 )
+normal = ExtResource( 7 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]
+
+

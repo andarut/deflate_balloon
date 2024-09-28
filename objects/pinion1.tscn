@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://images/pinion1.png" type="Texture" id=1]
+[ext_resource path="res://objects/pinion1.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "rotating"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 28.6036
+height = 701.828
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 181.325
+
+[node name="pinion1" type="Sprite"]
+
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="animation" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/rotating = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+rotation = 0.537973
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" index="2"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+rotation = 1.04644
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" index="3"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+rotation = 1.5691
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" index="4"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+rotation = 2.09634
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" index="5"]
+
+position = Vector2( 0.0905896, -0.0749144 )
+rotation = 2.59756
+scale = Vector2( 1.16488, 0.617848 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" index="6"]
+
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+

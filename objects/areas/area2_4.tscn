@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://objects/areas/area2_4.gd" type="Script" id=1]
+[ext_resource path="res://images/line5.png" type="Texture" id=2]
+[ext_resource path="res://images/pinion1.png" type="Texture" id=3]
+[ext_resource path="res://images/pinion1_back.png" type="Texture" id=4]
+[ext_resource path="res://objects/thorn2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/coin.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "line5"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="line5" type="Sprite" parent="." index="0"]
+
+position = Vector2( 321.182, 534.221 )
+rotation = 4.11844
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="pinion1" type="Sprite" parent="line5" index="0"]
+
+modulate = Color( 1, 1, 1, 0.139647 )
+show_behind_parent = true
+position = Vector2( 0.0227798, -0.317838 )
+rotation = 2.16475
+scale = Vector2( 2.11386, 2.11386 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="pinion1_back" type="Sprite" parent="line5" index="1"]
+
+show_behind_parent = true
+position = Vector2( -0.338135, -0.413971 )
+rotation = 2.16475
+scale = Vector2( 1.16882, 1.16882 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="thorn1" parent="line5" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( -188.364, -80.5059 )
+
+[node name="thorn2" parent="line5" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -304.814, -80.9354 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="thorn3" parent="line5" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 114.418, 76.8476 )
+rotation = -3.14159
+_sections_unfolded = [ "Transform" ]
+
+[node name="thorn4" parent="line5" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 170.745, 78.0307 )
+rotation = -3.14159
+
+[node name="thorn5" parent="line5" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 227.62, 78.8581 )
+rotation = -3.14159
+
+[node name="thorn6" parent="line5" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 284.782, 79.337 )
+rotation = -3.14159
+
+[node name="thorn7" parent="line5" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( -246.697, -80.7029 )
+
+[node name="thotn8" parent="line5" index="9" instance=ExtResource( 5 )]
+
+position = Vector2( -128.542, -80.5495 )
+
+[node name="animation" type="AnimationPlayer" parent="line5" index="10"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/line5 = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Node2D" parent="." index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 55.872, 507.352 )
+
+[node name="Node2D2" parent="." index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 522.246, 502.593 )
+
+

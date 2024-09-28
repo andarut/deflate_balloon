@@ -1,0 +1,123 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://objects/areas/area2_2.gd" type="Script" id=1]
+[ext_resource path="res://images/pinion1.png" type="Texture" id=2]
+[ext_resource path="res://images/line3.png" type="Texture" id=3]
+[ext_resource path="res://objects/pinion1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/score-point.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Rotate"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("pinion1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="pinion1" type="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0.196078 )
+position = Vector2( 332.019, 555.078 )
+rotation = 3.61882
+scale = Vector2( 1.97857, 1.97857 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="line3" type="Sprite" parent="." index="1"]
+
+position = Vector2( 343.391, 556.532 )
+texture = ExtResource( 3 )
+
+[node name="animation" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Rotate = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Node2D" type="Node2D" parent="." index="3"]
+
+position = Vector2( 331.153, 557.422 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="pinion2" parent="Node2D" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -4.95447, -205.546 )
+scale = Vector2( 0.522908, 0.522908 )
+
+[node name="animation" type="AnimationPlayer" parent="Node2D" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Rotate = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Node2D2" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 303.484, 529.449 )
+
+[node name="score-point" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 209.115, 553.918 )
+
+[node name="score-point2" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 456.434, 553.918 )
+
+[node name="score-point3" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 85.8076, 420.042 )
+
+[node name="score-point4" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 88.6261, 696.25 )
+
+[node name="score-point" parent="score-point4" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 470.681, 4.22772 )
+
+[node name="score-point5" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 559.307, 406.655 )
+
+

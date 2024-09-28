@@ -1,0 +1,35 @@
+{
+    "US_en":
+    {
+        "dis_ads": "DISABLE ADS",
+        "re_iap": "REFRESH IAP",
+        "lang": "LANGUAGE",
+        "so": "SOUNDS",
+        "vi": "VIBRATION",
+        "se": "SETTINGS",
+        "oo": "OOPS...",
+        "aftertext": "AFTER NOBODY HAS NEVER SEEN YOUR BALLOON",
+        "sc": "SCORE",
+        "be": "BEST",
+        "n_s": "NEW SKINS",
+        "d_b": "DAILY BONUS",
+        "ch": "CHALLENGES"
+    },
+    "RU_ru":
+    {
+        "dis_ads": "ОТКЛЮЧИТЬ РЕКЛ..",
+        "re_iap": "ВОССТАНОВИТЬ П..",
+        "lang": "ЯЗЫК",
+        "so": "ЗВУКИ",
+        "vi": "ВИБРАЦИЯ",
+        "se": "НАСТРОЙКИ",
+        "oo": "УУПС...",
+        "aftertext": "ПОСЛЕ НИКТО БОЛЬШЕ НЕ ВИДЕЛ ВАШ ШАР",
+        "sc": "СЧЕТ",
+        "be": "ЛУЧШИЙ",
+        "n_s": "НОВЫЕ СКИНЫ",
+        "d_b": "ЕЖЕДНЕВНЫЙ БОНУС",
+        "ch": "ИСПЫТАНИЯ"
+    }
+
+}

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fon Music For Deflate.wav-c8d55495e89142951b4f68ce72aa8487.sample"
+
+[deps]
+
+source_file="res://sound/Fon Music For Deflate.wav"
+dest_files=[ "res://.import/Fon Music For Deflate.wav-c8d55495e89142951b4f68ce72aa8487.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

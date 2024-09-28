@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/areas/area2_5.gd" type="Script" id=1]
+[ext_resource path="res://images/line4.png" type="Texture" id=2]
+[ext_resource path="res://objects/thorn2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/thorns2.png" type="Texture" id=4]
+[ext_resource path="res://objects/coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/score-point.tscn" type="PackedScene" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="line4" type="Sprite" parent="." index="0"]
+
+position = Vector2( 15.096, 556.549 )
+rotation = 0.785398
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" parent="line4" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -88.4137, -92.3717 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" parent="line4/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 62.7314, 2.63229 )
+
+[node name="Node2D" parent="line4/Node2D/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 57.164, -6.10352e-05 )
+
+[node name="Node2D" parent="line4/Node2D/Node2D/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 60.254, 1.54498 )
+
+[node name="Node2D" parent="line4/Node2D/Node2D/Node2D/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 61.799, 0 )
+
+[node name="line5" type="Sprite" parent="." index="1"]
+
+position = Vector2( 637.314, 565.785 )
+rotation = -0.785398
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D2" parent="line5" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 13.4918, -90.4847 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" parent="line5/Node2D2" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -59.4815, -0.772522 )
+
+[node name="Node2D" parent="line5/Node2D2/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -53.7592, 4.94969 )
+
+[node name="Node2D" parent="line5/Node2D2/Node2D/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -58.709, 6.10352e-05 )
+
+[node name="Node2D" parent="line5/Node2D2/Node2D/Node2D/Node2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -64.1165, -0.772522 )
+
+[node name="line6" type="Sprite" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0.196078 )
+position = Vector2( 690.412, 786.751 )
+rotation = -0.785398
+z_index = -1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="thorns3" type="Sprite" parent="line6" index="0"]
+
+position = Vector2( -76.9125, -48.6648 )
+texture = ExtResource( 4 )
+
+[node name="thorns2" type="Sprite" parent="line6/thorns3" index="0"]
+
+position = Vector2( -56.1084, -0.62738 )
+texture = ExtResource( 4 )
+
+[node name="thorns2" type="Sprite" parent="line6/thorns3/thorns2" index="0"]
+
+position = Vector2( -55.1039, 0.196777 )
+texture = ExtResource( 4 )
+
+[node name="line7" type="Sprite" parent="." index="3"]
+
+modulate = Color( 1, 1, 1, 0.196078 )
+position = Vector2( -49.2175, 130.053 )
+rotation = 0.785398
+z_index = -1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="thorns2" type="Sprite" parent="line7" index="0"]
+
+position = Vector2( 78.4567, -49.4098 )
+texture = ExtResource( 4 )
+
+[node name="thorns2" type="Sprite" parent="line7/thorns2" index="0"]
+
+position = Vector2( 54.6422, 0.282532 )
+texture = ExtResource( 4 )
+
+[node name="thorns2" type="Sprite" parent="line7/thorns2/thorns2" index="0"]
+
+position = Vector2( 54.6061, -0.381813 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Node2D" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 291.889, 681.846 )
+
+[node name="Node2D2" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 161.54, 461.207 )
+
+[node name="score-point" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 317.473, 607.509 )
+
+[node name="score-point2" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 442.655, 493.146 )
+
+[node name="score-point3" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 314.382, 366.418 )
+
+[node name="score-point4" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 320.1, 813.982 )
+
+

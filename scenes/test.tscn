@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/test.gd" type="Script" id=1]
+[ext_resource path="res://images/end_island.png" type="Texture" id=2]
+
+[node name="test" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="scroll" type="Sprite" parent="." index="0"]
+
+position = Vector2( 22.0974, 18.5791 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

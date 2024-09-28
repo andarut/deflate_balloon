@@ -1,0 +1,1186 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://gui/main_GUI.gd" type="Script" id=1]
+[ext_resource path="res://images/bestScore.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Comfortaa-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/coins.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://images/wb.background.png" type="Texture" id=6]
+[ext_resource path="res://images/help.png" type="Texture" id=7]
+[ext_resource path="res://images/touch.png" type="Texture" id=8]
+[ext_resource path="res://images/blue_bbbbbbtn.png" type="Texture" id=9]
+[ext_resource path="res://images/blue-2x-btnishe.png" type="Texture" id=10]
+[ext_resource path="res://images/bestScore2.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFontData" id=1]
+
+hinting = 2
+font_path = "res://fonts/Comfortaa-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 180
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "small"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 180, 125, 120 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wb.background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wb.background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("score:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -97, 115 ), Vector2( 58, 115 ), Vector2( 53, 115 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bestScore:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -27.3425, 87.7425 ), Vector2( 107.658, 87.7425 ), Vector2( 82.6575, 87.7425 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("best:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -33, 58 ), Vector2( 132, 58 ), Vector2( 117, 58 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("coins:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 669.33, 977.281 ), Vector2( 509.33, 977.281 ), Vector2( 549.33, 977.281 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("coins2:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 443, 949 ), Vector2( 273, 949 ), Vector2( 283, 949 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 48
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "complete"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 330 ), Vector2( 2, 280 ), Vector2( 2, 290 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("score:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 53, 155 ), Vector2( 53, 105 ), Vector2( 53, 115 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("score:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("best:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 117, 98 ), Vector2( 117, 48 ), Vector2( 117, 58 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("coins2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 283, 989 ), Vector2( 283, 939 ), Vector2( 283, 949 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("white_bg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1066.12, 628.667 ), Vector2( 782.788, 628.667 ), Vector2( 719.454, 628.667 ), Vector2( 696.121, 628.667 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 527, 554 ), Vector2( 340, 554 ), Vector2( 250, 554 ), Vector2( 206, 554 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("touch_icon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 700.79, 419.986 ), Vector2( 610.79, 423.319 ), Vector2( 580.79, 429.986 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.750881, 0.750881 ), Vector2( 0.750881, 0.750881 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=16]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=17]
+
+resource_name = "show"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 148.694, 1137.51 ), Vector2( 148.694, 1037.51 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+
+resource_name = "dis"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.529412 ) ]
+}
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=20]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 658.881, 772.027 ), Vector2( 158.881, 772.027 ), Vector2( 138.881, 772.027 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.531529 ) ]
+}
+
+[sub_resource type="DynamicFont" id=22]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=23]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=24]
+
+resource_name = "show"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 70 ), Vector2( 490, 70 ), Vector2( 480, 70 ) ]
+}
+
+[sub_resource type="DynamicFont" id=25]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=26]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=27]
+
+resource_name = "show"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 800, 70 ), Vector2( 500, 70 ), Vector2( 480, 70 ) ]
+}
+
+[node name="main_GUI" type="CanvasLayer" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="bestScore" type="Sprite" parent="." index="0"]
+
+position = Vector2( -27.3425, 87.7425 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="best" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 117.0
+margin_top = 98.0
+margin_right = 256.0
+margin_bottom = 166.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="coins2" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 283.0
+margin_top = 989.0
+margin_right = 514.0
+margin_bottom = 1057.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="score" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 53.0
+margin_top = 155.0
+margin_right = 346.0
+margin_bottom = 357.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="anim" type="AnimationPlayer" parent="score" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/small = SubResource( 4 )
+blend_times = [  ]
+
+[node name="animation" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/close = SubResource( 5 )
+anims/start = SubResource( 6 )
+blend_times = [  ]
+
+[node name="coins" type="Sprite" parent="." index="5"]
+
+position = Vector2( 669.33, 977.281 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ch_complete" type="Label" parent="." index="6"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 330.0
+margin_right = 643.0
+margin_bottom = 507.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+text = "CHALLENGE COMPLETE"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="anim" type="AnimationPlayer" parent="ch_complete" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/complete = SubResource( 8 )
+blend_times = [  ]
+
+[node name="wb.background" type="Sprite" parent="." index="7"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 266.646, 696.411 )
+scale = Vector2( 1.38615, 1.23305 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="obj_anim" type="AnimationPlayer" parent="." index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/add_score = SubResource( 9 )
+blend_times = [  ]
+
+[node name="best_anim" type="AnimationPlayer" parent="." index="9"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/new_best = SubResource( 10 )
+blend_times = [  ]
+
+[node name="close_timer" type="Timer" parent="." index="10"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[node name="coin_anim" type="AnimationPlayer" parent="." index="11"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/add = SubResource( 11 )
+blend_times = [  ]
+
+[node name="help_anim" type="AnimationPlayer" parent="." index="12"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/right = SubResource( 12 )
+blend_times = [  ]
+
+[node name="white_bg" type="Sprite" parent="." index="13"]
+
+position = Vector2( 1066.12, 628.667 )
+scale = Vector2( 1, 1.25023 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="touch_icon" type="Node2D" parent="." index="14"]
+
+position = Vector2( 700.79, 419.986 )
+scale = Vector2( 1.4453, 1.4453 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="touch" type="Sprite" parent="touch_icon" index="0"]
+
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="touch_anim" type="AnimationPlayer" parent="touch_icon/touch" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/t = SubResource( 13 )
+blend_times = [  ]
+
+[node name="Label" type="Label" parent="." index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 527.0
+margin_top = 554.0
+margin_right = 951.0
+margin_bottom = 935.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 7 )
+text = "TAP AND
+HOLD HERE"
+align = 2
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="Label" index="0"]
+
+modulate = Color( 1, 1, 1, 0.549569 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 176.0
+margin_top = 120.0
+margin_right = 419.0
+margin_bottom = 501.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 14 )
+text = "TO DEFLATE
+WIND FROM
+THIS EDGE"
+align = 2
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="ch_close_timer" type="Timer" parent="." index="16"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="invisible_btn" type="TouchScreenButton" parent="." index="17"]
+
+position = Vector2( 148.694, 1137.51 )
+scale = Vector2( 0.628826, 0.628826 )
+normal = ExtResource( 9 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Label" type="Label" parent="invisible_btn" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 22.0
+margin_top = 21.0
+margin_right = 595.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 15 )
+text = "INVISIBLE 60 SEC"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="invisible_btn" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 92.0
+margin_top = 85.0
+margin_right = 582.0
+margin_bottom = 158.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 16 )
+text = "- 5000"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="coins3" type="Sprite" parent="invisible_btn/Label2" index="0"]
+
+position = Vector2( -42.2462, 26.6602 )
+texture = ExtResource( 4 )
+
+[node name="anime" type="AnimationPlayer" parent="invisible_btn" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/show = SubResource( 17 )
+blend_times = [  ]
+
+[node name="dis_anim" type="AnimationPlayer" parent="invisible_btn" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/dis = SubResource( 18 )
+blend_times = [  ]
+
+[node name="Timer34" type="Timer" parent="invisible_btn" index="4"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = false
+autostart = false
+
+[node name="skeeper_btn" type="TouchScreenButton" parent="." index="18"]
+
+position = Vector2( 658.881, 772.027 )
+normal = ExtResource( 9 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Label" type="Label" parent="skeeper_btn" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 24.0
+margin_right = 547.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+text = "Skeep 20 areas"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Label2" type="Label" parent="skeeper_btn" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 95.0
+margin_top = 81.0
+margin_right = 617.0
+margin_bottom = 145.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+text = "- 2000"
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="coins" type="Sprite" parent="skeeper_btn/Label2" index="0"]
+
+position = Vector2( -41.7016, 26.5185 )
+texture = ExtResource( 4 )
+
+[node name="anime" type="AnimationPlayer" parent="skeeper_btn" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/show = SubResource( 20 )
+blend_times = [  ]
+
+[node name="dis_anim" type="AnimationPlayer" parent="skeeper_btn" index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/dis = SubResource( 21 )
+blend_times = [  ]
+
+[node name="Show_visible" type="TouchScreenButton" parent="." index="19"]
+
+visible = false
+position = Vector2( 288.229, 1065.38 )
+normal = ExtResource( 8 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="RUNER 1" type="Sprite" parent="." index="20"]
+
+position = Vector2( 800, 70 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="RUNER 1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -149.0
+margin_top = -45.0
+margin_right = 34.0
+margin_bottom = 12.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 22 )
+text = "RUNER"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="bestScore2" type="Sprite" parent="RUNER 1" index="1"]
+
+position = Vector2( 29.6201, -23.6152 )
+texture = ExtResource( 2 )
+
+[node name="bestScore3" type="Sprite" parent="RUNER 1" index="2"]
+
+position = Vector2( 76.7818, -23.6692 )
+texture = ExtResource( 11 )
+
+[node name="Label2" type="Label" parent="RUNER 1" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -93.0
+margin_top = 14.0
+margin_right = 199.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 23 )
+text = "RUN 10 AREAS"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="anime" type="AnimationPlayer" parent="RUNER 1" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/show = SubResource( 24 )
+blend_times = [  ]
+
+[node name="bestScore4" type="Sprite" parent="RUNER 1" index="5"]
+
+position = Vector2( 123.383, -24.5208 )
+texture = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="RUNER 1" index="6"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[node name="Visible_timer" type="Timer" parent="." index="21"]
+
+process_mode = 1
+wait_time = 60.0
+one_shot = false
+autostart = false
+
+[node name="RICH 1" type="Sprite" parent="." index="22"]
+
+position = Vector2( 800, 70 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="RICH 1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -133.0
+margin_top = -47.0
+margin_right = -30.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 25 )
+text = "RICH"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="bestScore" type="Sprite" parent="RICH 1" index="1"]
+
+position = Vector2( 14.9072, -26.6648 )
+texture = ExtResource( 2 )
+
+[node name="bestScore2" type="Sprite" parent="RICH 1" index="2"]
+
+position = Vector2( 65.1589, -26.5249 )
+texture = ExtResource( 11 )
+
+[node name="bestScore3" type="Sprite" parent="RICH 1" index="3"]
+
+position = Vector2( 113.607, -26.6648 )
+texture = ExtResource( 11 )
+
+[node name="Label2" type="Label" parent="RICH 1" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -128.0
+margin_top = 12.0
+margin_right = 126.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 26 )
+text = "COLLECT 10 COINS"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="anime" type="AnimationPlayer" parent="RICH 1" index="5"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/show = SubResource( 27 )
+blend_times = [  ]
+
+[node name="Timer1" type="Timer" parent="RICH 1" index="6"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="close_timer" to="." method="_on_close_timer_timeout"]
+
+[connection signal="timeout" from="ch_close_timer" to="." method="_on_ch_close_timer_timeout"]
+
+[connection signal="released" from="invisible_btn" to="." method="_on_invisible_btn_released"]
+
+[connection signal="timeout" from="invisible_btn/Timer34" to="." method="_on_Timer34_timeout"]
+
+[connection signal="released" from="skeeper_btn" to="." method="_on_skeeper_btn_released"]
+
+[connection signal="released" from="Show_visible" to="." method="_on_Show_visible_released"]
+
+[connection signal="timeout" from="RUNER 1/Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="timeout" from="Visible_timer" to="." method="_on_Visible_timer_timeout"]
+
+[connection signal="timeout" from="RICH 1/Timer1" to="." method="_on_Timer1_timeout"]
+
+

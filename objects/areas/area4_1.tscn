@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/pinion1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/laser.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/laser.gd" type="Script" id=3]
+[ext_resource path="res://objects/coin.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "animation"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="pinion1" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 5.91919, 282.649 )
+scale = Vector2( 0.775951, 0.775951 )
+
+[node name="pinion2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 641.653, 288.281 )
+scale = Vector2( 0.793132, 0.793132 )
+
+[node name="pinion3" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 1.89213, 869.429 )
+scale = Vector2( 0.772515, 0.772515 )
+
+[node name="pinion4" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 640.073, 866.227 )
+scale = Vector2( 0.731282, 0.731282 )
+
+[node name="Node2D" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 321.046, 567.797 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="animation" type="AnimationPlayer" parent="Node2D" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/animation = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Node2D2" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 292.261, 259.435 )
+
+[node name="Node2D3" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 72.8774, 538.929 )
+
+[node name="Node2D4" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 519.004, 535.63 )
+
+[node name="Node2D5" parent="." index="8" instance=ExtResource( 4 )]
+
+position = Vector2( 290.142, 839.886 )
+
+

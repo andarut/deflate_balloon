@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/background/stars.gd" type="Script" id=1]
+[ext_resource path="res://images/stars.png" type="Texture" id=2]
+
+
+
+[node name="stars" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="stars1" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 1.1198, 1.1198 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="stars2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 0, 1136 )
+scale = Vector2( 1.1198, 1.1198 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+
